@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>For Shubhiiii ❤️</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(120deg, #ff9a9e, #fad0c4, #fbc2eb);
+    background-size: 400% 400%;
+    animation: bgMove 12s ease infinite;
+    color: #fff;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+@keyframes bgMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+.hearts {
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: -1;
+}
+
+.heart {
+    position: absolute;
+    bottom: -30px;
+    width: 18px;
+    height: 18px;
+    background: rgba(255,255,255,0.6);
+    transform: rotate(45deg);
+    animation: float 14s linear infinite;
+}
+
+.heart::before,
+.heart::after {
+    content: '';
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    background: rgba(255,255,255,0.6);
+    border-radius: 50%;
+}
+
+.heart::before {
+    top: -9px;
+    left: 0;
+}
+
+.heart::after {
+    left: -9px;
+    top: 0;
+}
+
+@keyframes float {
+    0% { transform: translateY(0) rotate(45deg); opacity: 1; }
+    100% { transform: translateY(-120vh) rotate(45deg); opacity: 0; }
+}
+
+section {
+    min-height: 100vh;
+    padding: 60px 20px;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+section.active {
+    display: flex;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.6em;
+    margin-bottom: 20px;
+    text-shadow: 0 4px 12px rgba(0,0,0,0.25);
+}
+
+p {
+    font-size: 1.15em;
+    max-width: 620px;
+    line-height: 1.7;
+}
+
+button {
+    margin-top: 32px;
+    padding: 12px 36px;
+    border: none;
+    border-radius: 30px;
+    background: rgba(255,255,255,0.95);
+    color: #e75480;
+    font-size: 1em;
+    cursor: pointer;
+    transition: transform 0.25s;
+}
+
+button:hover {
+    transform: scale(1.07);
+}
+
+.checklist {
+    text-align: left;
+    font-size: 1.1em;
+}
+
+.checklist label {
+    display: block;
+    margin: 12px 0;
+}
+
+.photos img {
+    width: 240px;
+    border-radius: 18px;
+    margin: 10px;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+}
+</style>
+</head>
+
+<body>
+
+<div class="hearts">
+    <div class="heart" style="left:10%; animation-delay:0s;"></div>
+    <div class="heart" style="left:25%; animation-delay:3s;"></div>
+    <div class="heart" style="left:40%; animation-delay:6s;"></div>
+    <div class="heart" style="left:55%; animation-delay:2s;"></div>
+    <div class="heart" style="left:70%; animation-delay:5s;"></div>
+    <div class="heart" style="left:85%; animation-delay:1s;"></div>
+</div>
+
+<audio autoplay loop>
+    <source src="song.mp3" type="audio/mpeg">
+</audio>
+
+<section class="active">
+    <h1>Happiestttttt New Year Meri Pyaarii Cutieee piee Shubhiiii Darlingg♡ ✨</h1>
+    <p>May this year smile at you the way you make me smile.</p>
+    <button onclick="next()">Continue ❤️</button>
+</section>
+
+<section>
+    <h1>Thank You 🤍</h1>
+    <p>
+        If 2025 had a best part, it was you.  
+        Thank you for being my hapyyy place, my chaos, my calm, my fav person, my everything
+    </p>
+    <button onclick="next()">Next →</button>
+</section>
+
+<section>
+    <h1>Our 2026 Bucket List 🌙</h1>
+    <div class="checklist">
+        <label><input type="checkbox"> Make me feel jealous</label>
+        <label><input type="checkbox"> Late night talks</label>
+        <label><input type="checkbox"> Cute fights just like you(btw big ladai will also work, nakhre utha lunga yawwrr!!)</label>
+        <label><input type="checkbox"> Sharing everything</label>
+        <label><input type="checkbox"> Choosing each other, every day</label>
+    </div>
+    <button onclick="next()">Almost there…</button>
+</section>
+
+<section>
+    <h1>Want Thousands Of Photos With You!!</h1>
+    <div class="photos">
+        <img src="photo1.jpg">
+        <img src="photo2.jpg">
+        <img src="photo3.jpg">
+    </div>
+    <button onclick="next()">One last thing…</button>
+</section>
+
+<section>
+    <h1>Shubhiiii</h1>
+    <p>
+                I love you ♡
+        Today. Tomorrow. Always. Forever
+    </p>
+</section>
+
+<script>
+let current = 0;
+const sections = document.querySelectorAll("section");
+
+function next() {
+    sections[current].classList.remove("active");
+    current++;
+    sections[current].classList.add("active");
+}
+</script>
+
+</body>
+</html>
